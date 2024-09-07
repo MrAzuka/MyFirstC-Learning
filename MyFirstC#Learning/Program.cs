@@ -8,129 +8,26 @@ using System.Threading.Tasks;
 
 namespace MyFirstC_Learning
 {
-    class Rectangle
+    class Program
     {
-       private double length, width;
-
-        public void AcceptInputs()
-        {
-            Console.Write("Enter the Length: ");
-            length = Convert.ToInt64(Console.ReadLine());
-            Console.Write("Enter the Width: ");
-            width = Convert.ToInt64(Console.ReadLine());
-
-        }
-        public double CalculateArea()
-        {
-            return length * width;
-        }
-
-        public void DisplayAnswer() {
-            Console.WriteLine($"Length: {length}");
-            Console.WriteLine($"Width: {width}");
-            Console.WriteLine($"Area: {CalculateArea(): 0.00}");
-        }
-
-        public void ExecuteArea()
-        {
-            AcceptInputs();
-            CalculateArea();
-            DisplayAnswer();
-        }
-    }
-
-    class Square
-    {
-        private double length, width;
-
-        public void AcceptInputs()
-        {
-            Console.Write("Enter the Length: ");
-            length = Convert.ToInt64(Console.ReadLine());
-            Console.Write("Enter the Width: ");
-            width = Convert.ToInt64(Console.ReadLine());
-
-        }
-        public double CalculateArea()
-        {
-            return length * width;
-        }
-
-        public void DisplayAnswer()
-        {
-            Console.WriteLine($"Length: {length}");
-            Console.WriteLine($"Width: {width}");
-            Console.WriteLine($"Area: {CalculateArea(): 0.00}");
-        }
-
-        public void ExecuteArea()
-        {
-            AcceptInputs();
-            CalculateArea();
-            DisplayAnswer();
-        }
-    }
-
-    class Circle
-    {
-        private double radius;
-       
-
-        public void AcceptInputs()
-        {
-            Console.Write("Enter the Radius: ");
-            radius = Convert.ToInt64(Console.ReadLine());
-
-        }
-        public double CalculateArea()
-        {
-            return Math.PI * (Math.Pow(radius,2));
-        }
-
-        public void DisplayAnswer()
-        {
-            Console.WriteLine($"Radius: {radius}");
-            Console.WriteLine($"Area: {CalculateArea(): 0.00}");
-        }
-
-        public void ExecuteArea()
-        {
-            AcceptInputs();
-            CalculateArea();
-            DisplayAnswer();
-        }
-    }
-    class ExecuteArea
-    {
+        /*
+        * Create an int and try convert any string to an int
+        * Notice the error, write a try.....catch handler around it
+        * catch the error and output the error message
+        * without changing the current code
+        * call in main and output total
+        * 
+        * Why is this a bad situation and how can we know it has converted?
+        * 
+        * Create a custome try parse function
+        * Find the real function and return type/params
+        * Read the tooltip it gives you, to give you ideas on what to do
+        */
         static void Main(string[] args)
         {
-            Console.WriteLine("SELECT YOUR SHAPE:");
-            Console.WriteLine("1. Rectangle");
-            Console.WriteLine("2. Square");
-            Console.WriteLine("3. Circle");
-
-            int option = Convert.ToInt32(Console.ReadLine());
-
-            switch (option)
-            {
-                case 1:
-                    Rectangle r = new Rectangle();
-                    r.ExecuteArea();
-                    break;
-                case 2:
-                    Square s = new Square();
-                    s.ExecuteArea();
-                    break;
-                case 3:
-                    Circle c = new Circle();
-                    c.ExecuteArea();
-                    break;
-                default:
-                    Console.WriteLine("No option selected");
-                    break;
-
-            }
-
+            
+            
+            
             Console.ReadLine();
         }
     }
