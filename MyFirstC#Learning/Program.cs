@@ -25,10 +25,31 @@ namespace MyFirstC_Learning
         */
         static void Main(string[] args)
         {
-            
-            
-            
+            Console.Write("Input a number: ");
+            if (TryParse(Console.ReadLine(), out int result)) {
+                Console.WriteLine($"converted, {result}");
+            }
+            else
+            {
+                Console.WriteLine("not converted");
+            }
+
+
             Console.ReadLine();
+        }
+
+        static bool TryParse(string input, out int result) {
+            result = -1;
+
+            try
+            {
+                result = Convert.ToInt32(input);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
